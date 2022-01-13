@@ -1,0 +1,21 @@
+---
+name: Lint and Test
+  #on: [push, pull_request_target, pull_request, workflow_dispatch]
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          path: rockylinux.org
+
+      - name: Check URLs
+        uses: urlstechie/urlchecker-action@0.0.25
+        with:
+          subfolder: src
+          file_types: .md,.js 
+          print_all: true
+          branch: devel
+...
