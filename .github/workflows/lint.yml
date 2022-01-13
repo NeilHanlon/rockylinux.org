@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        with:
-          path: rockylinux.org
 
       - name: Check URLs
         uses: urlstechie/urlchecker-action@0.0.25
