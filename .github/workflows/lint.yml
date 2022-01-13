@@ -15,4 +15,6 @@ jobs:
           subfolder: src
           file_types: .md,.js 
           print_all: false
+          exclude_patterns: .iso
+          retries: 3
 ...
