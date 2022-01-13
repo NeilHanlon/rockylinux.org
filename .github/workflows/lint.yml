@@ -14,6 +14,5 @@ jobs:
         with:
           subfolder: src
           file_types: .md,.js 
-          print_all: true
-          branch: devel
+          print_all: false
 ...
