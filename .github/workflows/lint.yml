@@ -9,12 +9,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Check URLs
+      - name: check urls
         uses: urlstechie/urlchecker-action@0.0.25
         with:
           subfolder: src
           file_types: .md,.js 
           print_all: false
-          exclude_patterns: .iso
+          exclude_patterns: .iso,.qcow2
           retries: 3
 ...
